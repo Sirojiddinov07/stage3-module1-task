@@ -7,15 +7,21 @@ import com.mjc.school.model.NewsModel;
 import java.util.List;
 
 public  interface Repository<T> {
-    public abstract List<T> readAll();
 
-    public abstract T reaById(Long id) throws NewsNotFoundException;
+    List<T> readAll();
+
+
+    T reaById(Long id) throws NewsNotFoundException;
 
     T create(T t) throws AuthorNotFoundException;
 
-    T udate(NewsModel newsModel) throws  AuthorNotFoundException, NewsNotFoundException;
 
     boolean deleteById(Long id) throws NewsNotFoundException;
 
+    NewsModel udate(NewsModel newsModel) throws  AuthorNotFoundException, NewsNotFoundException;
+
     int getNexId();
+
+    T update(T data) throws NewsNotFoundException, AuthorNotFoundException;
+
 }

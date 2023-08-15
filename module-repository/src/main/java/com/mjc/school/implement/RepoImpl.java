@@ -15,7 +15,7 @@ public class RepoImpl implements Repository<NewsModel> {
 
 
     @Override
-    public NewsModel create (NewsModel newsModel) throws AuthorNotFoundException{
+    public NewsModel create (NewsModel newsModel) throws AuthorNotFoundException {
         checkAuthorId(newsModel.getAuthor().getId());
         dataSource.getNewsModelList().add(newsModel);
         return newsModel;
@@ -30,7 +30,7 @@ public class RepoImpl implements Repository<NewsModel> {
 
     }
     @Override
-    public NewsModel reaById(Long id) throws NewsNotFoundException{
+    public NewsModel reaById(Long id) throws NewsNotFoundException {
         int indexOfNews = checkNewsId(id);
         return dataSource.getNewsModelList().get(indexOfNews);
     }
@@ -56,6 +56,10 @@ public class RepoImpl implements Repository<NewsModel> {
         return dataSource.getNextNewsId();
     }
 
+    @Override
+    public NewsModel update(NewsModel data) throws NewsNotFoundException, AuthorNotFoundException {
+        return null;
+    }
 
 
     @Override

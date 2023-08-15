@@ -1,0 +1,8 @@
+jar.enabled = true
+
+dependencies {
+    implementation project(path:':module-repository')
+    implementation project(path:':module-repository')
+    implementation 'org.modelmapper:modelmapper:3.0.0'
+    implementation 'org.projectlombok:lombok:1.18.22'
+}
