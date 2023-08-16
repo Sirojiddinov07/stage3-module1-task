@@ -67,7 +67,7 @@ public class RepoImpl implements Repository<NewsModel> {
 
     private int  checkNewsId(Long id) throws NewsNotFoundException{
         List<NewsModel> newsModelList = dataSource.getNewsModelList();
-        int indexOfNews = newsModelList.indexOf(new NewsModel(id));
+        int indexOfNews = newsModelList.indexOf(new NewsModel());
         if (indexOfNews == -1){
             throw new NewsNotFoundException("News not exist with id " + id );
         }return  indexOfNews;
