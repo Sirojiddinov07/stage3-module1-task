@@ -11,6 +11,7 @@ import java.util.List;
 
 public class RepoImpl implements Repository<NewsModel> {
 
+    private DataSource dataSource = new DataSource();
 
 
 
@@ -22,7 +23,6 @@ public class RepoImpl implements Repository<NewsModel> {
     }
 
 
-    private DataSource dataSource = new DataSource();
 
     @Override
     public List<NewsModel> readAll(){
@@ -56,10 +56,7 @@ public class RepoImpl implements Repository<NewsModel> {
         return dataSource.getNextNewsId();
     }
 
-    @Override
-    public NewsModel update(NewsModel data) throws NewsNotFoundException, AuthorNotFoundException {
-        return null;
-    }
+
 
 
     @Override

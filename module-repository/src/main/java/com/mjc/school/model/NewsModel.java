@@ -10,8 +10,8 @@ import java.util.Objects;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class NewsModel {
     Long id;
     String title;
@@ -26,19 +26,23 @@ public class NewsModel {
     }
 
 
-
-//    @Override
-//    public boolean equals(Object o){
-//        if (this == o)
-//            return true;
-//        if (o == null || getClass()!= o.getClass());
-//        return false;
-//        NewsModel newsModel = (NewsModel) o;
-//        return id.equals(newsModel.id);
-//}
     @Override
-    public int hashCode(){
-        return Objects.hash(id);
-    }
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (!(obj instanceof NewsModel)) {
+            return false;
+        }
+        NewsModel other = (NewsModel) obj;
+        return Objects.equals(id, other.id);
 
+
+        }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+
+    }
 }

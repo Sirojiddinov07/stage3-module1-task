@@ -18,4 +18,17 @@ public class NewsDto {
     LocalDateTime createDate;
     LocalDateTime lastUpdateDate;
     Long authorId;
+
+
+    @Override
+    public String toString() {
+        return "NewsDto{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", createDate=" + createDate +
+                ", lastUpdateDate=" + lastUpdateDate +
+                ", authorId=" + authorId +
+                '}';
+    }
 }

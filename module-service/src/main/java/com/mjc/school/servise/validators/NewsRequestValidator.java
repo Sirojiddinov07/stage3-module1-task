@@ -1,5 +1,6 @@
 package com.mjc.school.servise.validators;
 
+import com.mjc.school.servise.DTO.NewsUpdateDtoReq;
 import com.mjc.school.servise.exeptions.NewsTitleInvalidException;
 import com.mjc.school.servise.DTO.NewsCreateDtoReq;
 import com.mjc.school.servise.exeptions.NewsContentInvalidException;
@@ -13,7 +14,7 @@ public class NewsRequestValidator {
 
 
 
-    public void  validateNewsUpdateDTORequest(NewsCreateDtoReq dtoReq)throws
+    public void  validateNewsUpdateDTORequest(NewsUpdateDtoReq dtoReq)throws
             NewsContentInvalidException, NewsTitleInvalidException {
 
         checkTitle(dtoReq.getTitle());

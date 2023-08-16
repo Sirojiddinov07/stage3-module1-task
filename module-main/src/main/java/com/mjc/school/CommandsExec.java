@@ -24,7 +24,6 @@ public class CommandsExec {
         if (command == Commands.EXIT)
             System.exit(0);
 
-        System.out.print("Operation: ");
         System.out.println(command.desc);
         switch (command) {
             case GET_ALL -> {

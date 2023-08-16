@@ -22,6 +22,5 @@ public  interface Repository<T> {
 
     int getNexId();
 
-    T update(T data) throws NewsNotFoundException, AuthorNotFoundException;
 
 }

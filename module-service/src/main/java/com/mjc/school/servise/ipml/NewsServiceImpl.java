@@ -71,7 +71,7 @@ public class NewsServiceImpl implements NewsService<NewsDto> {
         newsValidator.validateNewsUpdateDTORequest(news);
 
         return mapper.mapModelToDto(
-                newsRepository.update(
+                newsRepository.udate(
                         mapper.mapRequestDtoToModel(news)
                 ));
     }

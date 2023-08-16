@@ -1,7 +1,7 @@
 jar.enabled = true
 
 dependencies {
-    implementation project(path:':module-web')
+    implementation project(':module-web')
     implementation project(path: ':module-service')
     implementation project(path: ':module-repository')
 }

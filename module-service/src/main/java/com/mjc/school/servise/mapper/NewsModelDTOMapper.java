@@ -1,8 +1,8 @@
 package com.mjc.school.servise.mapper;
 
 import com.mjc.school.model.NewsModel;
-import com.mjc.school.servise.DTO.NewsCreateDtoReq;
 import com.mjc.school.servise.DTO.NewsDto;
+import com.mjc.school.servise.DTO.NewsUpdateDtoReq;
 import org.modelmapper.ModelMapper;
 
 public class NewsModelDTOMapper {
@@ -16,7 +16,7 @@ public class NewsModelDTOMapper {
         return mapper.map(news, NewsModel.class);
     }
 
-    public NewsModel mapRequestDtoToModel(NewsCreateDtoReq news) {
+    public NewsModel mapRequestDtoToModel(NewsUpdateDtoReq news) {
         return mapper.map(news, NewsModel.class);
     }
 

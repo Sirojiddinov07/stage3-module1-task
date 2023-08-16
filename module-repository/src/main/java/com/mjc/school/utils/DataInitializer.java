@@ -39,7 +39,7 @@ public class DataInitializer {
             int authorId = Integer.parseInt(titLin.substring(titLin.indexOf(",")+1).trim());
             newsModelList.add(new NewsModel(
                      (long) id, title, content, LocalDateTime.now(),LocalDateTime.now(),
-                    authorModelList.get(authorId-1).getId()));
+                    authorModelList.get(authorId-1)));
         }
         return newsModelList;
     }
