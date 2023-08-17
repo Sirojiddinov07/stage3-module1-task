@@ -3,9 +3,9 @@ package com.mjc.school.repository.implement;
 
 import com.mjc.school.repository.model.NewsModel;
 import com.mjc.school.repository.utils.DataSource;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.AllArgsConstructor;
 
 import java.util.List;
 

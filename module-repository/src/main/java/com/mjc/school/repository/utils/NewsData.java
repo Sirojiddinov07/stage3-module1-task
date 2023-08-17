@@ -11,16 +11,16 @@ import java.util.Random;
 
 
     public class NewsData {
-        private static final String CONTENT_FILE_NAME = "content.txt";
-        private static final String NEWS_FILE_NAME = "news.txt";
+        private static final String Content_file = "content.txt";
+        private static final String News_file = "news.txt";
         private static NewsData instance;
         private final List<NewsModel> newsList;
 
         private NewsData() {
             newsList = new ArrayList<>();
             List<AuthorModel> authors = AuthorData.getInstance().getAuthorList();
-            List<String> content = DataReader.read(CONTENT_FILE_NAME);
-            List<String> titles = DataReader.read(NEWS_FILE_NAME);
+            List<String> content = DataReader.read(Content_file);
+            List<String> titles = DataReader.read(News_file);
             Random rnd = new Random();
             for (long i = 1; i <= 20; i++) {
                 newsList.add(new NewsModel(
@@ -28,7 +28,7 @@ import java.util.Random;
                         titles.get(rnd.nextInt(titles.size())),
                         content.get(rnd.nextInt(content.size())),
                         LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS), LocalDateTime.now().truncatedTo(ChronoUnit.SECONDS),
-                        authors.get(rnd.nextInt(authors.size())).getId()));
+                        authors.get(rnd.nextInt(authors.size()))));
             }
         }
 

@@ -1,38 +1,46 @@
 package com.mjc.school.repository.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 import java.util.Objects;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class AuthorModel {
     private Long id;
-    private String  name;
+    private String name;
 
+    public AuthorModel(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public AuthorModel(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AuthorModel that = (AuthorModel) o;
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name);
+    }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof AuthorModel)) {
-            return false;
-        }
-        AuthorModel other = (AuthorModel) obj;
-        return Objects.equals(id, other.id);
+        return Objects.hash(id, name);
     }
 }
-
-
-
